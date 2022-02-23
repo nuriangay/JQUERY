@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button">gizle</div>
+        <div class="button">goster</div>
+        <div class="button">gizle/goster</div>
+        <div class="box1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae explicabo veniam mollitia reiciendis ullam aut! Earum reiciendis dolor cupiditate quo, quasi natus ad, neque voluptatem voluptatum recusandae ipsa? Facilis, odit?</div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(":button:eq(0)").click(function(){
+                $(".box1").hide(500); //fadeOut kullanılabilir
+                
+            })
+            $(":button:eq(1)").click(function(){
+                $(".box1").show("fast"); //fadeIn kullanılabilir
+            })
+            $(":button:eq(2)").click(function(){
+                $(".box1").toggle(500); //fadeToogle kullanılabilir
+            })
+            $(":button:eq(2)").click(function(){
+                $(".box1").fadeTo("slow",0.5); //soluklastırma
+            })
+            $(":button:eq(2)").click(function(){
+                $(".box1").fadeOut(5000,function(){
+
+                    alert("bekle")
+                }); 
+            
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

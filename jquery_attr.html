@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bilgi" id="icerik">
+        <br>
+        ad soyad : <input type="text" name="adsoyad" id="adsoyad" value=""><br>
+        okul no: <input type="text" name="okulno" id="okulno"><br>
+        <input type="button" name="basınız" id="basınız" value="basınız">
+        <input type="button" name="sil" id="sil" value="siliniz">
+    
+    </div>
+
+    <script>
+        //attribute function
+      //  $(document).ready(function(){
+
+        //    $(":button").click(function(){
+          //      $("icerik").append($("input:eq(0)").attr("name"));
+            //    $("input:eq(1)").attr("value","okulno");
+            //})
+        //});
+
+        $(document).ready(function(){
+            $(":button:eq(0)").click(function(){
+                $("#icerik").addClass("bilgi");
+            })
+        })
+        
+            $(document).ready(function(){
+            $(":button:eq(1)").click(function(){
+                $("#icerik").removeClass("bilgi");
+            })
+
+        })
+        
+    </script>
+    
+</body>
+</html>

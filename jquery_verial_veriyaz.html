@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p></p>
+        <input type="text" name="" id="sayi1">
+        <input type="text" name="" id="sayi2">
+        <input type="text" name="" id="sayi3">
+    </div>
+    <script>
+
+        $(document).ready(function(){
+            $(":button").click(function(){
+
+            
+                
+            var sayı1=$("input:eq(0)").val();
+            var sayı2=$("input:eq(0)").val();
+            var toplam=sayı1+sayı2;
+            $("p").html(toplam);
+
+            })
+
+            
+
+            
+        })
+    </script>
+    
+</body>
+</html>

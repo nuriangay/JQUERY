@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+
+        <label for="uzmanlık">Uzmanlık</label>
+        <select name="" id="uzmanlık">
+            <option value="">seciniz</option>
+            <option value="grafik">grafiker</option>
+            <option value="web">web programlama</option>
+            <option value="masaustu">masaustu programlama</option>
+
+        </select>
+
+        <br>
+        <div class="secenek">
+
+            <form action="" class="bilgi" method="get"></form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("select").change(function(){
+                var meslek=$(".container option:selected").val();
+                $(".bilgi").empty();
+                if(meslek=="grafik"){
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="PS">Photoshop');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="AI">Illudtrator');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="CD">Corel Draw');
+                }
+                if(meslek=="web"){
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="php">PHP');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="asp">ASP');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="java">JAVA');
+                }
+                if(meslek=="masaüstü"){
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="C">C');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="CPLUS">C++');
+                    $(".bilgi").append('<input type="checkbox" name="meslek" value="Csharp">C#');
+                }
+
+                $(".bilgi").append('<input type="submit" value="gönder"')
+                
+            })
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: red;
+    position: relative;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: bisque;
+    padding: 15px;
+    display: block;
+}
+
+ul li:hover{
+    background: wheat;
+}
+ul ul{
+    position: absolute;
+    min-width: 200px;
+    background: wheat;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+    background: red;
+
+}
+ul li:hover ul{
+    display: block;
+
+}
+ul li i{
+    color: aliceblue;
+    float: right;
+    padding-right:15px ;
+}
+
+nav div{
+    background: red;
+    color: bisque;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:700px){
+    nav div{
+        display: block;
+    }
+    ul{
+        display: none;
+        position: static;
+        background: red;
+    }
+
+    ul li{
+        display: block;
+    }
+    ul ul{
+        position: static;
+        background: red;
+    }
+}
